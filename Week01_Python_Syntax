@@ -1,0 +1,90 @@
+INTRO_TO_PYTHON_Week04_23-27_Oct23
+WEEK01:PYTHON SYNTAX
+DAY 1:INTRO TO PYTHON
+What is Python?
+•	Python is a high-level, general-purpose, and interpreted programming language used in various sectors including machine learning, artificial intelligence, data analysis, web development, and many more. 
+•	Python is known for its ease of use, powerful standard library, and dynamic semantics. 
+•	It also has a large community of developers who keep on contributing towards its growth. The major focus behind creating it is making it easier for developers to read and understand, also reducing the lines of code.
+
+COMMENTS
+•	Are added to make the code easier to understand
+•	Comments in python start with #
+
+DAY 2:VARIABLES
+	Variables=are containers for storing data values
+	A variable is created the moment a value is assigned to it
+	Variables do not need to be declared with any particular type, and can even change type once they have been set
+	If you want to specify the data type of a variable, this can be done with CASTING
+	Can get the data type of the variable by using the type() function
+	Variables can be declared using Single or Double Quotes
+	Variables are Case-sensitive
+	Variable names may contain any upper or lower case letter (A–Z, a–z), a number, or the underscore character. They may not begin with a number or contain spaces.
+	USING VARIABLES
+	Variables have to be assigned to a data type, whether a string or integer
+	A variable is automatically assigned to an appropriate data type
+	For example, Python automatically assigns a variable to a string data-type, if an input or value is given that contains letters or words.
+Type Casting in Python (Implicit and Explicit)
+Python Implicit Type Conversion
+	In this, method, Python converts the datatype into another datatype automatically
+	it is possible to cast an integer to a floating-point without any data loss.
+	For example. casting from an integer variable to a floating-point variable or casting from an integer variable to another integer variable
+Python Explicit Type Conversion
+	In this method, Python needs user involvement to convert the variable data type into the required data type.
+	A value cannot be automatically cast from one data type to another if it will result in data loss. Extra code has to be written to ensure that the value stays the same and only the data type changes.
+	For example, casting from a floating-point value to an integer value
+	In summary notice that no errors occur when converting from an integer to a float. This will always be the case because an integer can be cast to a float data type implicitly because there will be no data loss. 
+	However the reverse is not true; a floating-point number cannot be implicitly cast into an integer as this will result in data loss (all data after the precision (.) will be lost), because the floating-point value does not get rounded off to the nearest whole number when implicitly converting to an integer
+
+DAY 3:DATA TYPES
+	Choosing the wrong data type affects the performance of a computer. 
+	Some programs might need numbers from 1-20 and it would not make sense to  use string variables to store the, because they would need to be converted to numbers before any calculations can be done on them.
+TYPES OF DATA TYPES
+	Integer=these would be  your whole numbers without decimal points
+	Integers include positive and negative numbers
+
+	Booleans=evaluate a TRUE or False
+>>>>The Boolean data type is like a switch that can be either on (1, or True) or off (0, or False). When you write it as words, it's always 'True' or 'False,' not '1' or '0.' In Python, 'True' and 'False' are written with exact capitalization. Booleans help check if things are true or not. There are three ways to do this
+1.The 'and' operator
+2.The 'or' operator
+3.The 'not' operator"
+>>>>Operators and built-in functions that have a Boolean result always return (False or 0) or (True or 1). The Boolean or and and operations always return only one of the options, either True or False.
+	Floating point numbers=are decimal values or fraction numbers
+	Complex numbers= A complex number consists of a real part and an imaginary part, and it is often written in the form a + bj, where a is the real part and b is the imaginary part. In Python, the imaginary unit is denoted by j.
+	Strings=represents a sequence of characters
+Lambda Expressions
+	In simple terms, lambda expressions are like tiny, anonymous (unnamed) functions in programming that you can use when you need a quick, small function for a specific task. They're like shortcuts for writing simple functions on the fly without giving them a formal name. Lambda expressions are often used for short, one-off operations in code.
+	Have to use lambda keyword so that python knows that one is creating an anonymous function
+
+Conventions about the content and formatting of documentation strings
+	In Python, documentation strings, commonly referred to as "docstrings," are used to provide information about modules, classes, functions, and methods. Conventions for the content and formatting of docstrings are important for maintaining code readability and consistency. While there's no strict standard enforced by the Python interpreter, there are widely accepted conventions, including the use of triple-quoted strings, that have become the norm in the Python community.
+	Here are some conventions about the content and formatting of documentation strings.
+	# 1. First Line: A short, concise summary of the object's purpose. It should not explicitly mention the object's name or type. Start with a capital letter and end with a period.
+	# 2. Separation: If there are more lines in the docstring, the second line should be blank to separate the summary from the detailed description. Subsequent lines provide more information about calling conventions, side effects, etc.
+	# 3. Indentation: The first non-blank line after the opening triple quotes determines the indentation for the entire docstring. Whitespace equivalent to this indentation is stripped from all lines.
+	# Example of a multi-line docstring:
+def my_function():
+    """
+  	  Do nothing, but document it.    
+   No, really, it doesn't do anything.
+    """
+    pass
+	# Intermezzo: Coding Style
+	 Adopt a coding style to make your code more readable. PEP 8 is a widely accepted style guide for Python.
+	Follow these key points:
+	#   - Use 4-space indentation (no tabs).
+	#   - Limit lines to 79 characters for better readability and compatibility with small displays.
+	#   - Use blank lines to separate functions and classes.
+	#   - Place comments on a separate line.
+	#   - Use docstrings for documentation.
+	#   - Apply spaces around operators and after commas.
+	#   - Use consistent naming conventions (UpperCamelCase for classes, lowercase_with_underscores for functions and methods).
+	#   - Always use "self" as the first method argument in classes.
+	#   - Avoid fancy encodings and non-ASCII characters in identifiers for international use.
+
+DAY 4:OPERATORS
+Introduction to Operators
+	Operators in Python are essential for testing conditions and manipulating values. 
+	Operators are used to perform operations on variables and values.
+	Operators provide the functionality to an expression and can be represented by symbols such as + or by keywords such as and.
+	 Operators require data to operate, and this data is known as an operand
+
