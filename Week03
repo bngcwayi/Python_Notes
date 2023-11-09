@@ -1,0 +1,317 @@
+DATA_STRUCTURES_Week03_06-10-Nov2023
+WEEK03:DATA_STRUCTURES
+DAY 1:DATA_STRUCTURES
+
+	Data Structures are a way of organizing data so that it can be accessed more efficiently depending upon the situation.
+
+LISTS
+	a list is a collection of things, enclosed in [ ] and separated by commas.
+	Lists are used to store multiple items in a single variable.
+	Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.
+	List items are ordered, changeable, and allow duplicate values. When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
+	List items are indexed, the first item has index [0], the second item has index [1]
+	If you add new items to a list, the new items will be placed at the end of the list
+	The list is changeable, meaning that we can change, add, and remove items in a list after it has been created
+	Since lists are indexed, lists can have items with the same value
+	List items can be of any data type
+	There are some methods that are used when it comes to lists
+
+These are the various actions you can perform on a list in Python:
+	list.append(x): Adds an item x to the end of the list. It's like attaching something to the end of the list.
+	list.extend(iterable): Increases the list by adding all the items from another collection (usually another list or something that can be iterated, like a range).
+
+	list.insert(i, x): Puts an item x at a specific position i in the list. You can insert at the beginning (index 0) or end (equivalent to append) and anywhere in between.
+
+	list.remove(x): Removes the first occurrence of an item with a value equal to x. If the item is not in the list, it raises an error.
+	list.pop([i]): Removes and returns an item at the specified index i. If no index is given, it removes and returns the last item. Square brackets around i mean the parameter is optional.
+
+	list.clear(): Empties the list, removing all its items. It's like starting with an empty list.
+
+	list.index(x[, start[, end]]): Finds the first occurrence of an item with the value x and returns its index. You can limit the search to a specific portion of the list using optional start and end parameters.
+
+	list.count(x): Tells you how many times an item with the value x appears in the list.
+
+
+	list.sort(key=None, reverse=False): Sorts the list in ascending order by default. You can customize the sorting using the optional key and reverse parameters.
+	list.reverse(): Reverses the order of items in the list, so the last item becomes the first, and vice versa.
+	list.copy(): Creates a copy of the list. This new list is a separate instance from the original but contains the same items.
+	In simple terms, these are like tools you can use to manipulate and work with lists in Python. They allow you to add, remove, sort, and perform various operations on your lists to make your code more effective and efficient.
+Using Lists as Stacks and Queues
+	Lists can be used as lists and a queue
+Using a List as a Stack:
+	A stack is a data structure where you add and remove items in a last-in, first-out (LIFO) order. Think of it like a stack of books, where you add books on top, and the last book added is the first one you can pick up.
+	In Python, you can use a list as a stack by using the append() method to add items to the top of the stack and the pop() method without an index to retrieve and remove the item from the top.
+	For example, you can create a list called stack and use append() to add items to the stack. When you use pop(), it removes and returns the last item added (the top item).
+
+	Using a List as a Queue (Inefficiently):
+	A queue is a data structure where you add and remove items in a first-in, first-out (FIFO) order. Imagine a line of people waiting for something, where the first person in line is the first one to be served.
+	You can use a list as a queue, but it's not efficient for this purpose. While adding and removing items from the end of a list is fast, doing the same from the beginning is slow because all other elements need to be shifted.
+	If you need to implement a queue efficiently, Python offers the collections.deque (double-ended queue) which is designed for fast appends and pops from both ends.
+	The example provided shows how to use collections.deque to create a queue. You can append and pop items from both ends efficiently using append() and popleft() methods.
+	In simple terms, you can use a list in Python to work like a stack or a queue, but if you need a queue with efficient operations, you should use collections.deque. 
+	Stacks follow a last-in, first-out order, while queues follow a first-in, first-out order.
+List Comprehensions
+	List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+	For example is you have the following list (fruits = ["apple", "banana", "cherry", "kiwi", "mango"]) and want to create a new list with fruits that have the “ä” letter in them, the new list would include [apple, banana and mango: only ]. This would be the way to achieve the above ** newlist = [x for x in fruits if "a" in x]
+
+Nested Comprehension
+	Nested List Comprehensions are nothing but a list comprehension within another list comprehension which is quite similar to nested for loops.
+The del statement / Tuples and Sequences
+Using del to Remove Items from Lists:
+	The del statement in Python allows you to remove an item from a list based on its index (position in the list) rather than its value. This is different from the pop() method, which removes an item by value and returns that value. You can also use del to remove a range of items (a slice) from a list or clear the entire list by specifying an empty slice [:]. 
+ Here are some examples of using del to remove items from a list:
+	del a[0] removes the first item from the list a.
+	del a[2:4] removes items at indices 2 and 3 in the list a.
+	del a[:] clears (empties) the entire list a.
+	del a can also be used to delete the entire variable a, making it unusable.
+
+Introduction to Tuples:
+	The passage introduces tuples, which are another sequence data type in Python. Tuples are similar to lists but with some key differences. 
+	Tuples consist of values separated by commas and are usually enclosed in parentheses when displayed. They are immutable, meaning their elements cannot be changed once they are created.
+	Tuple Packing and Unpacking:
+	Tuple packing is the process of creating a tuple by grouping values together with commas. Tuple unpacking is the reverse process, where you can assign the values of a tuple to individual variables. For example, x, y, z = t unpacks the values in the tuple t and assigns them to the variables x, y, and z. This works for any sequence on the right-hand side.
+	Differences Between Lists and Tuples:
+	The passage highlights some key differences between lists and tuples. Lists are mutable, meaning their elements can be changed, while tuples are immutable. Lists are often used for homogeneous data and are accessed by iterating over their elements, while tuples can contain a heterogeneous sequence of elements and are typically accessed via unpacking or indexing.
+	Creating Empty and Single-Item Tuples:
+	Creating empty tuples is done using an empty pair of parentheses () while creating a single-item tuple requires a trailing comma after the value. For example, empty = () creates an empty tuple, and singleton = 'hello', creates a single-item tuple containing the string 'hello'.
+	Overall, the passage provides an overview of how to use the del statement with lists and introduces the concept of tuples, including their packing, unpacking, and key differences from lists. It also discusses some peculiarities of creating empty and single-item tuples.
+
+SETS
+	Sets are used to store multiple items in a single variable.
+	A set is a collection which is unordered, unchangeable*, and unindexed.
+	Set items are unchangeable, but you can remove items and add new items, does not allow duplicate values. 
+	The values True and 1 are considered the same value in sets, and are treated as duplicates:
+	Sets are written with curly brackets. EG fruit = {"apple", "banana", "cherry"}
+
+Dictionaries
+	In simple terms, a dictionary in Python is like a collection of labeled boxes. Each box has a unique label (called a "key") and contains some information (the "value"). 
+	Keys can be things like words or numbers, and they must be unchangeable (immutable). You can't use lists as keys because they can be changed. You can think of a dictionary as a way to store and organize data so you can quickly find the information you need.
+	You can create an empty dictionary with curly braces, like this: {}. 
+	To add information to the dictionary, you put key-value pairs inside the braces, separated by commas. For example: {"name": "John", "age": 30}.
+	Dictionary items are ordered and does not allow duplicates.
+You can do three main things with a dictionary:
+	Store information: You can add new key-value pairs or update existing ones.
+	Retrieve information: You can look up a value by using its key.
+	Delete information: You can remove a key-value pair if you don't need it anymore.
+	Dictionaries keep the keys unique, so you can't have two boxes with the same label. If you try to get information with a key that doesn't exist, it will result in an error. You can also check if a specific key is in the dictionary using the "in" keyword.
+	You can get a list of all the keys in a dictionary, and they'll be in the order they were added. If you want the keys sorted, you can use the "sorted" function.
+
+LOOPING TECHNIQUES 
+	You can loop through a dictionary by using a for loop.
+	When looping through a dictionary, the return value are the keys of the dictionary, but there are methods to return the values as well.
+	Example below showing looping using FOR
+	thisdict =	{
+	  "brand": "Ford",
+	  "model": "Mustang",
+	  "year": 1964
+	}
+	for x in thisdict:
+	  print(x)   # Output is brand, mode and year[the keys]
+	Looping Through Dictionaries: When you have data stored in a dictionary (a key-value pair collection), you can use a loop to go through both the keys and values at the same time using the items() method. This allows you to process the data associated with each key-value pair.
+	Eg using items()method 
+	thisdict =	{
+	  "brand": "Ford",
+	  "model": "Mustang",
+	  "year": 1964
+	}
+	for key, value in thisdict.items():
+	  print(key)
+	  print(value)
+	Enumerating a Sequence: If you have a list or sequence of items, you can use the enumerate() function to loop through it while simultaneously getting the position index and the corresponding value. This is useful when you need to know the index of each item.
+	Looping Over Multiple Sequences Together: When you have multiple lists and want to process their elements together, you can use the zip() function. It pairs elements from different sequences so you can work with them side by side.
+	Looping in Reverse: You can loop through a sequence in reverse order by first defining the sequence in the regular (forward) direction and then using the reversed() function. This is handy when you need to work with elements from the end of the sequence to the beginning.
+	Looping in Sorted Order: If you want to process items from a sequence in a sorted order, you can use the sorted() function. It returns a new sorted list while keeping the original sequence unchanged.
+	Modifying a List Safely: It's often best to avoid changing a list while you're looping over it. Instead, you can create a new list to store the modified data. This is safer and prevents unexpected behavior in your loop.
+
+MORE ON CONDITIONS
+	In simple terms, the provided information explains how conditions and comparisons work in Python:
+	Conditions in Statements: When using while and if statements in Python, you can have conditions that involve various operators, not just comparisons like greater than or equal to. This means you can use a wide range of operations to check conditions.
+	Comparison Operators: Python has comparison operators like IN, NOT IN, IS, and IS NOT.
+	IN and NOT IN are used to check if a value exists (or doesn't exist) in a sequence.
+	IS and IS NOT compare whether two objects are the same in memory, which is essential for mutable objects like lists.
+	Operator Priority: All comparison operators have the same priority, which is lower than that of numerical operators. This means they are evaluated after numerical calculations.
+	Chained Comparisons: You can chain comparisons together. For example, a < b == c checks if a is less than b and also if b is equal to c.
+	Boolean Operators: You can combine comparisons and conditions using Boolean operators such as and, or, and not. These operators allow you to create more complex conditions by connecting simpler ones.
+	Operator Priority in Combining: When you combine operators, they have different priorities. not has the highest priority, and or has the lowest. For example, A and not B or C is equivalent to (A and (not B)) or C. You can use parentheses to control the order of evaluation to ensure your conditions work as intended.
+	Short-Circuit Operators: The and and or operators are short-circuit operators. This means they evaluate their arguments from left to right and stop as soon as the outcome is known. For example, if A and C are true but B is false, A and B and C won't evaluate C.
+	These concepts are important for building conditions and controlling the flow of your Python code, allowing you to make decisions and perform actions based on specific criteria or comparisons.
+
+Comparing Sequences and Other Types
+	In simple terms, the provided information explains how sequences, like lists, tuples, and strings, are compared in Python:
+	Lexicographical Ordering: When you compare sequences (like lists, tuples, or strings) with the same type, Python uses lexicographical ordering. It means that Python compares them element by element from the beginning. If it finds a difference between corresponding elements, that determines the outcome of the comparison. If the elements are equal, it continues comparing the next elements until one sequence is exhausted.
+	Nested Sequences: If the elements being compared are themselves sequences of the same type, the lexicographical comparison is done recursively, meaning it compares their elements as well. If all elements in two sequences are equal, then the sequences are considered equal.
+	Subsequence Comparison: If one sequence is a part of the other sequence at the beginning (an initial sub-sequence), the shorter sequence is considered smaller or lesser in the comparison.
+	Ordering for Strings: For strings, Python uses the Unicode code point number to order individual characters when comparing them. This is why 'ABC' is considered less than 'C' and 'C' is less than 'Pascal'.
+	Examples: The information provides examples of comparisons between sequences of the same type, showing how the lexicographical ordering works for different cases.
+	Comparing Different Types: Python also allows comparing objects of different types using < or >, but only if those objects have appropriate comparison methods. For example, mixed numeric types are compared based on their numeric values. If the types can't be sensibly compared, Python raises a TypeError exception.
+	In essence, Python compares sequences by looking at their elements one by one until it finds a difference or determines that they are equal. This allows you to establish the order of sequences based on their content.
+
+DAY 2:PYTHON LISTS
+Creating Lists
+	 A list is created by placing all the items (elements) inside square brackets [], separated by commas.
+	It can have any number of items and they may be of different types (integer, float, string etc.).
+	Eg below
+	# empty list
+	my_list = []
+	# list of integers
+	my_list = [1, 2, 3] 
+	# list with mixed data types
+	my_list = [1, "Hello", 3.4]
+	example of a nested list below
+	# nested list
+	my_list = ["mouse", [8, 4, 6], ['a']]
+
+Access List Elements
+	List items are indexed and you can access them by referring to the index number
+	eg below
+	thislist = ["apple", "banana", "cherry"]
+	print(thislist[0])
+	print(thislist[1])
+	print(thislist[2])
+Using Lists as Stacks and Queues
+	Negative indexing=Python allows negative indexing for its sequences. 
+	The index of -1 refers to the last item, -2 to the second last item and so on.
+
+Slicing lists in python
+	You can return a range of characters by using the slice syntax.
+	Specify the start index and the end index, separated by a colon, to return a part of the string
+	Eg 
+	b = "Hello, World!"
+	print(b[1:5])  ##output is ello
+	list slicing in Python is a common practice and can be used both with positive indexes as well as negative indexes
+Add/Change List Elements
+	Lists are mutable, meaning their elements can be changed unlike string or tuple.
+	To change the value of a specific item, refer to the index number
+	Eg below changing the 2nd item on the list
+	 
+	Change a Range of Item Values:
+	To change the value of items within a specific range, define a list with the new values, and refer to the range of index numbers where you want to insert the new values:
+	Eg replacing elements  with new one using the start and end index 
+ 
+	If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly
+	Can change 2 item and replace with 1 items or change 1 with 2 more items
+	Insert Items
+	To insert a new list item, without replacing any of the existing values, we can use the insert() method.
+	The insert() method inserts an item at the specified index:
+	Eg below showing the insert method, without replacing any items
+
+	The example above shows that the list now contains 4 items
+	Append Items
+	To add an item to the end of the list, use the append() method:
+	Eg below 
+
+	Extend List
+	To append elements from another list to the current list, use the extend() method.
+	Eg showing the use of extend.method to add 2 lists into 1 list
+
+	The elements will be added to the end of the list.
+	The extend.method also works with tuple, sets, dictionaries
+	We can also use + operator to combine two lists. This is also called concatenation.
+	The * operator repeats a list for the given number of times.
+	Eg below showing using + to adding to a list and repeating a list
+
+	Delete/ Remove List Elements
+	We can delete one or more items from a list using the keyword del. It can even delete the list entirely.
+	The del keyword also removes the specified index:
+	Eg below, del.method used to remove the 1st item on the list 
+ 
+	Remove Specified Item
+	The remove() method removes the specified item.
+	If there are more than one item with the specified value, the remove() method removes the first occurance
+	Eg below of remove.method	 
+
+	Remove Specified Index
+	The pop() method removes the specified index
+	The pop() method removes and returns the last item if the index is not provided. This helps us implement lists as stacks (first in, last out data structure).
+	Eg below using the pop.method 
+	We can also use the clear() method to empty a list.
+Python List Method
+	These would be all the methods we have touched on so far and others eg, remove, extend, clear, del, pop
+
+DAY 3:ERRORS AND EXCEPTIONS
+	Errors are the problems in a program due to which the program will stop the execution. On the other hand, exceptions are raised when some internal events occur which changes the normal flow of the program. 
+Two types of Error occurs in python. 
+	Syntax errors= SYNTAX ERRORS= are also known as parsing errors, which are the common errors we get
+	When the proper syntax of the language is not followed then a syntax error is thrown
+	Eg of syntax error below	 
+	Output of the above example is below
+
+	It returns a syntax error message because after the if statement a colon: is missing. We can fix this by writing the correct syntax.
+	Logical errors (Exceptions) = Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it. Errors detected during execution are called exceptions
+	When in the runtime/execution phase an error that occurs after passing the syntax test is called exception or logical type. 
+	For example, when we divide any number by zero then the ZeroDivisionError exception is raised, or when we import a module that does not exist then ImportError is raised.
+	Exceptions come in different types, and the type is printed as part of the message
+	Another example below showing exception errors (Indentation error)
+	 
+	The rest of the line provides detail based on the type of exception and what caused it.
+	The string printed as the exception type is the name of the built-in exception that occurred. This is true for all built-in exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception names are built-in identifiers (not reserved keywords).
+	Below is a list of exceptions errors
+ 
+	ERROR HANDLING
+	When an error and an exception are raised then we handle that with the help of the Handling method
+	Handling Exceptions with Try/Except/Finally 
+	We can handle errors by the Try/Except/Finally method. we write unsafe code in the try, fall back code in except and final code in finally block.
+	The try block lets you test a block of code for errors.
+	The except block lets you handle the error.
+	The else block lets you execute code when there is no error.
+	The finally block lets you execute code, regardless of the result of the try- and except blocks.
+	Exception Handling
+	When an error occurs, or exception as we call it, Python will normally stop and generate an error message.
+	These exceptions can be handled using the try statement:
+	Raising an Exception
+	In Python, you can use the raise keyword to throw an exception if a certain condition occurs. This allows you to handle exceptional cases and handle errors in your code. The raise statement can be complemented with a custom exception to provide more information about the error.
+
+	For example, let's say we have a variable x with a value of 10, and we want to raise an exception if x exceeds 5. We can use the following code:
+	 
+	When this code is executed, it will raise an exception with the message "x should not exceed 5. The value of x was: 10". The program will then terminate and print a traceback, showing the line of code where the exception was raised.
+	This is the output of the above code 
+
+	Assertions
+	Instead of waiting for a program to crash midway, you can use assertions in Python to make sure that certain conditions are met. 
+	An assertion is a statement that you believe to be true at a certain point in your program. If this condition turns out to be true, then the program can continue. However, if the condition turns out to be false, you can have the program throw an AssertionError exception.
+	Assertions are useful for catching errors early on and ensuring that your code behaves as expected. They are typically used during development and testing to check assumptions and validate inputs.
+	We also have user-defined exceptions
+
+DAY 4:CLASSES
+	Python is an object oriented programming language.
+	Almost everything in Python is an object, with its properties and methods.
+	A Class is like an object constructor, or a "blueprint" for creating objects.
+	A class is a user-defined blueprint or prototype from which objects are created.
+	Classes provide a means of bundling data and functionality together. 
+	Creating a new class creates a new type of object, allowing new instances of that type to be made. 
+	Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by their class) for modifying their state.
+	To understand the need for creating a class and object in Python let’s consider an example, let’s say you wanted to track the number of dogs that may have different attributes like breed and age. If a list is used, the first element could be the dog’s breed while the second element could represent its age. Let’s suppose there are 100 different dogs, then how would you know which element is supposed to be which? What if you wanted to add other properties to these dogs? This lacks organization and it’s the exact need for classes.
+	Classes are created by keyword class.
+	Attributes are the variables that belong to a class.
+	Attributes are always public and can be accessed using the dot (.) operator. Eg.: My class.Myattribute
+	Create a Class
+	To create a class, use the keyword class:
+	Eg of creating a class
+
+	Create Object
+	An Object is an instance of a Class.
+	 A class is like a blueprint while an instance is a copy of the class with actual values. 
+	It’s not an idea anymore, it’s an actual dog, like a dog of breed pug who’s seven years old. You can have many dogs to create many different instances, but without the class as a guide, you would be lost, not knowing what information is required.
+	Now we can use the class named MyClass to create objects:
+	Eg below of creating an object
+
+	An object consists of:
+	State: It is represented by the attributes of an object. It also reflects the properties of an object.
+	Behavior: It is represented by the methods of an object. It also reflects the response of an object to other objects.
+	Identity: It gives a unique name to an object and enables one object to interact with other objects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
